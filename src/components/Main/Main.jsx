@@ -1,3 +1,4 @@
+import { Add } from '@mui/icons-material';
 import { Box, Button, Container, Typography } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +15,13 @@ const Main = () => {
           Todo App React
         </Typography>
         <Box pt={2} justifyContent='start' display='flex'>
-          <Button variant='contained' size='small' onClick={handleClick}>
+          <Button
+            variant='contained'
+            color='primary'
+            size='small'
+            onClick={handleClick}
+          >
+            <Add fontSize='small' />
             Add
           </Button>
         </Box>

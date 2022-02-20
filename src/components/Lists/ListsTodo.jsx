@@ -38,7 +38,7 @@ const ListsTodo = () => {
                   <Grid container spacing={2} justifyContent='center'>
                     <Grid item>
                       <Button
-                        variant='outlined'
+                        variant='contained'
                         color='primary'
                         size='small'
                         onClick={handleUpdate}
@@ -47,7 +47,7 @@ const ListsTodo = () => {
                       </Button>
                     </Grid>
                     <Grid item>
-                      <Button variant='contained' color='primary' size='small'>
+                      <Button variant='contained' color='error' size='small'>
                         <Delete fontSize='small' />
                       </Button>
                     </Grid>
