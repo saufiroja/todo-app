@@ -31,7 +31,6 @@ const ListsTodo = () => {
     axios
       .get(`https://todo-app-for-example.herokuapp.com/api/todos`)
       .then((res) => {
-        console.log(res.data.todos);
         setTodo(res.data.todos);
         setLoading(false);
       });
