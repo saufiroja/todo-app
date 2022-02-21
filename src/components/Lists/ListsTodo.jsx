@@ -11,6 +11,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -60,16 +61,27 @@ const ListsTodo = () => {
         <TableContainer>
           <Table>
             <TableHead>
-              <TableRow>
-                <TableCell>Title</TableCell>
-                <TableCell>Description</TableCell>
-                <TableCell align='center'>Action</TableCell>
-              </TableRow>
+              {todo.length === 0 ? (
+                <Box display='flex' justifyContent='center'>
+                  <Typography variant='h5'>No Data</Typography>
+                </Box>
+              ) : (
+                <TableRow>
+                  <TableCell>Title</TableCell>
+                  <TableCell>Description</TableCell>
+                  <TableCell align='center'>Action</TableCell>
+                </TableRow>
+              )}
             </TableHead>
             <TableBody>
               <>
                 {loading ? (
-                  <Box display='flex' justifyContent='center' pt={5}>
+                  <Box
+                    display='flex'
+                    justifyContent='center'
+                    height={50}
+                    pt={5}
+                  >
                     <CircularProgress />
                   </Box>
                 ) : (
